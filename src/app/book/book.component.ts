@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Book } from '../entities';
 
@@ -8,6 +8,7 @@ import { Book } from '../entities';
   imports: [CommonModule],
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookComponent {
   @Input() book?: Book;
